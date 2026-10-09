@@ -1,0 +1,14 @@
+node_modules/
+dist/
+src-tauri/target/
+src-tauri/gen/
+*.log
+.DS_Store
+**/bin/
+**/obj/
+native/artifacts/
+artifacts/
+/Rustychops.exe
+native/*-reference.txt
+native/api-inspection.txt
+

@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <Version>0.1.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AlphaTab.Windows" Version="1.8.4" />
+    <PackageReference Include="NAudio" Version="2.2.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="../../public/soundfont/sonivox.sf2" Link="Assets/sonivox.sf2" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="../../public/soundfont/LICENSE" Link="Assets/SoundFont-LICENSE.txt" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="../../public/soundfont/README.md" Link="Assets/SoundFont-README.md" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="THIRD-PARTY-NOTICES.md" Link="Assets/THIRD-PARTY-NOTICES.md" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="*-LICENSE.txt" Link="Assets/%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

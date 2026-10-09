@@ -1,0 +1,38 @@
+{
+  "name": "rustychops",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "native:dev": "dotnet run --project native/Rustychops",
+    "native:launcher": "node scripts/build-launcher.mjs",
+    "native:check": "dotnet run --project native/Rustychops.Checks -c Release",
+    "native:build": "dotnet publish native/Rustychops -c Release -r win-x64 --self-contained true -o artifacts/windows",
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "desktop:dev": "tauri dev",
+    "desktop:build": "tauri build",
+    "verify:imports": "node scripts/verify-imports.mjs",
+    "verify:tuner": "node scripts/verify-tuner.mjs",
+    "check": "npm run lint && npm run build"
+  },
+  "dependencies": {
+    "@coderline/alphatab": "^1.8.4",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@coderline/alphatab-vite": "^1.8.4",
+    "@tauri-apps/cli": "^2.12.1",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "oxlint": "^1.81.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  }
+}
